@@ -1,0 +1,191 @@
+.footer {
+    display: grid;
+    gap: 2rem;
+    grid-template-areas: 
+    "contact-us"
+    "headquarters-taxes"
+    "social-media"
+    "rights";
+    background-color: var(--dark-blue-gray-color);
+    padding: 2rem;
+    width: 100%;
+}
+
+.footer__contact-us {
+    grid-area: contact-us;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    & h2 {
+        margin: 0 auto;
+        color: var(--oil-blue-color);
+        font-size: 1.2rem;
+        text-align: center;
+
+    }
+
+    & h3 {
+        color: var(--white-font-color);
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+    }
+
+    & p {
+        color: var(--light-gray-color);
+        font-size: 0.8rem;
+        margin-bottom: .4rem;
+    }
+}
+
+.footer__contact-us div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footer__contact-us--info {
+    display: flex;
+    gap: 0.6rem;
+}
+
+.footer__social-media {
+    grid-area: social-media;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+
+    & h2 {
+        margin: 0 auto;
+        color: var(--oil-blue-color);
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    & div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0 2rem;
+    }
+
+    & a {
+        color: var(--white-font-color);
+        font-size: 1.5rem;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+            color: var(--oil-blue-color);
+        }
+    }
+}
+
+.footer__headquarters-taxes {
+    grid-area: headquarters-taxes;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+
+    & h2 {
+        color: var(--oil-blue-color);
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    & a {
+        color: var(--light-gray-color);
+        font-size: 0.8rem;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+            color: var(--white-font-color);
+        }
+    }
+}
+
+.footer__rights {
+    grid-area: rights;
+
+    & p {
+        color: var(--light-gray-color);
+        font-size: 0.7rem;
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .footer {
+        grid-template-areas: 
+        "contact-us headquarters-taxes"
+        "contact-us social-media"
+        "rights rights";
+        padding: 2rem 4rem;
+    }
+
+    .footer__contact-us {
+        align-items: flex-start;
+
+         h2 {
+            text-align: left;
+            margin: 0;
+        }
+    }
+
+    .footer__contact-us div {
+        align-items: flex-start;
+    }
+
+    .footer__headquarters-taxes {
+        align-items: flex-start;
+        justify-items: flex-end;
+    }
+
+    .footer__social-media {
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+}
+
+@media (min-width: 900px){
+    .footer {
+        padding: 2rem 8rem;
+    }
+}
+
+@media (min-width: 1000px) {
+    .footer {
+        padding: 2rem 10rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .footer {
+        grid-template-areas: 
+        "contact-us headquarters-taxes social-media"
+        "contact-us rights rights";
+        padding: 2rem 7rem;
+    }
+
+    .footer__headquarters-taxes {
+        h2 {
+            margin-bottom: 2rem;
+        }
+    }
+
+    .footer__social-media {
+        gap: 2rem;
+    }
+
+    .footer__rights {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        margin-bottom: 0.5rem;
+    }
+}

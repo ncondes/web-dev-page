@@ -1,0 +1,22 @@
+.card {
+    background-color: var(--cold-white-bg-color);
+    border-radius: .5rem;
+    width: 100%;
+}
+
+.card__content {
+    text-align: left;
+    padding: 2rem;
+
+    & h2 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+}
+
+.card__image img {
+    border-radius: .5rem .5rem 0 0;
+    width: 100%;
+    object-fit: cover;
+}

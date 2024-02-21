@@ -1,0 +1,102 @@
+.about-us__intro figure {
+    width: 100%;
+
+    img {
+        border-radius: .2rem ;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.about-us__history-tab-content {
+    h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    img {
+        height: 150px;
+        width: 150px;
+        float: right;
+        margin-left: .8rem;
+        border-radius: .2rem;
+    }
+    
+    a {
+        color: var(--oil-blue-color);
+        font-weight: 600;
+    }
+}
+
+.about-us__our-founder--grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.about-us__card-container {
+    width: 100%;
+    max-width: 22rem;
+    margin: 0 auto;
+}
+
+.about-us__why-do-we-exists--quote {
+    font-weight: 500;
+    font-style: italic;
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.about-us__accordion-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+
+    i {
+        float: left;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    p::first-letter {
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+}
+
+.about-us__tabs--height{
+    height: 28rem;
+}
+
+@media (min-width: 768px) {
+    .about-us__tabs--height {
+        height: 20rem;
+    }
+
+    .about-us__history-tab-content {
+        img {
+            height: 200px;
+            width: 200px;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .about-us__our-founder--grid {
+        grid-template-columns: 7fr 5fr;
+    }
+
+    .about-us__tabs--height {
+        height: 16rem;
+    }
+
+    .about-us__history-tab-content {
+        img {
+            margin-left: 1.6rem;
+        }
+    }
+}

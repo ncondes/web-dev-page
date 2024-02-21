@@ -1,0 +1,18 @@
+.custom-list__item {
+    display: flex;
+    align-items: center;
+    padding: .6rem 1.2rem;
+    border-radius: .2rem;
+}
+
+.custom-list__item i {
+    margin-right: .5rem;
+}
+
+.custom-list__item:nth-child(odd) {
+    background-color: transparent;
+}
+
+.custom-list__item:nth-child(even) {
+    background-color: var(--light-blue-gray-color);
+}

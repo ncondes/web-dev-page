@@ -1,0 +1,19 @@
+.how-to-help__sponsorship-plan figure {
+    width: 100%;
+
+    img {
+        border-radius: .2rem;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.how-to-help__christmas-cards figure {
+    width: 100%;
+
+    img {
+        border-radius: .2rem;
+        width: 100%;
+        object-fit: cover;
+    }
+}

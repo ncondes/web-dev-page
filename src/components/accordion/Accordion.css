@@ -1,0 +1,34 @@
+.accordion__item {
+    background-color: var(--cold-white-bg-color);
+    border-radius: 0.5rem;
+    margin-bottom: .2rem;
+}
+
+.accordion__button {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-align: left;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    background-color: var(--cold-white-bg-color);
+    cursor: pointer;
+}
+
+.accordion__button:focus {
+    outline: none;
+}
+
+.accordion__body {
+    text-align: left;
+    padding: 1rem 2rem 2rem;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+}
+
+[aria-expanded="true"]+.accordion__body {
+    display: block;
+}

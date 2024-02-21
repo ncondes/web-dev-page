@@ -1,0 +1,38 @@
+.section-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    position: relative;
+    text-align: center;
+    margin: 0 auto 2.2rem auto;
+    width: 100%;
+    max-width: 20rem;
+}
+
+.section-title::before {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    display: block;
+    width: 100%;
+    margin: 0 auto 0.5rem auto;
+    height: 0.1rem;
+    background-color: var(--light-gray-color);
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 0.2rem;
+    margin: 0 auto;
+    background-color: var(--oil-blue-color);
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    .section-title {
+        font-size: 1.5rem;
+        max-width: 30rem;
+    }
+}

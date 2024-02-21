@@ -1,0 +1,82 @@
+/*
+ * Base
+ */
+@import url('./reset.css');
+
+/*
+ * Components
+ */
+@import url('../components/navbar/Navbar.css');
+@import url('../components/navbar/Sidebar.css');
+@import url('../components/hero/Hero.css');
+@import url('../components/card/Card.css');
+@import url('../components/cardGrid/CardGrid.css');
+@import url('../components/tabs/Tabs.css');
+@import url('../components/footer/Footer.css');
+@import url('../components/sectionTitle/SectionTitle.css');
+@import url('../components/accordion/Accordion.css');
+@import url('../components/list/List.css');
+@import url('../components/paragraph/Paragraph.css');
+@import url('../components/form/Form.css');
+@import url('../components/blockquote/Blockquote.css');
+
+/*
+ * Pages
+ */
+@import url('../pages/home/Home.css');
+@import url('../pages/about-us/AboutUs.css');
+@import url('../pages/how-to-help/HowToHelp.css');
+@import url('../pages/contact-us/ContactUs.css');
+
+/*
+ * Utilities
+*/
+@import url('./utilities.css');
+
+/*
+ * Common
+ */
+
+ .section-container {
+    max-width: 1024px;
+    padding: 0 2rem;
+    margin: 0 auto 3rem auto;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0, 2, 3, 0.85);
+    overflow-x: hidden; 
+    animation: fadeInAnimation ease-in-out .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOutAnimation {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@media (min-width: 768px) {
+    .section-container {
+        max-width: 768px;
+        padding: 0 4rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .section-container {
+        max-width: 1200px;
+        padding: 0 6rem;
+    }
+}

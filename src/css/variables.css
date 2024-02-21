@@ -1,0 +1,37 @@
+:root {
+    /* Base Colors */
+    --oil-blue-color: #24619d;
+    --oil-blue-bg-color: #1d5389;
+    --cold-white-bg-color: #f8f9fa;
+    --cold-white-bg-color-hover: #eef1f3;
+    --crimson-red-color: #e24f42;
+    --crimson-red-color-hover: #b33226;
+    --black-shadow-color: rgba(0, 0, 0, 0.2);
+    --light-gray-color: #a2adba;
+    --light-blue-gray-color: #f0f4f8;
+    --dark-blue-gray-color: #26292e;
+    --pearl-white-color: #dee3e5;
+    --forest-green-color: #409a51;
+
+    /* Fonts */
+    --dark-blue-font-color: #031426;
+    --dark-blue-font-color-hover: #1d5389;
+    --gray-blue-font-color: #3f4b55;
+    --white-font-color: #f8f9fa;
+
+    /* Navbar Mobile Menu */
+    --mobile-menu-bar-bg-color: #031426;
+    
+    /* Fonts */
+    --font-stack: system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        'Open Sans',
+        'Helvetica Neue',
+        sans-serif;
+}
