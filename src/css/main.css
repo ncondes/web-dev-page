@@ -19,6 +19,9 @@
 @import url('../components/paragraph/Paragraph.css');
 @import url('../components/form/Form.css');
 @import url('../components/blockquote/Blockquote.css');
+@import url('../components/blogEntry/BlogEntry.css');
+@import url('../components/blogGrid/BlogGrid.css');
+@import url('../components/blogManager/BlogManager.css');
 
 /*
  * Pages

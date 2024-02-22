@@ -21,6 +21,13 @@
 
     /* Navbar Mobile Menu */
     --mobile-menu-bar-bg-color: #031426;
+
+    /* Label Chip Colors */
+    --label-chip--new: #FF5733;
+    --label-chip--popular: #ca2856;
+    --label-chip--featured: #5bbd45;
+    --label-chip--must-read: #335BFF;
+    --label-chip--editors-choice: #F033FF;
     
     /* Fonts */
     --font-stack: system-ui,
