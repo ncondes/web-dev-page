@@ -62,7 +62,7 @@
 
 .sidebar__item--active {
     background-color: var(--white-font-color);
-    border-radius: .5rem;
+    border-radius: 0.4rem;
 }
 
 .sidebar__item--active a {    
@@ -82,7 +82,6 @@
     background-color: var(--crimson-red-color);
     color: var(--cold-white-bg-color);
     padding: .8rem .8rem;
-    border-radius: .5rem;
     transition: background-color 0.3s ease-in-out;
 }
 

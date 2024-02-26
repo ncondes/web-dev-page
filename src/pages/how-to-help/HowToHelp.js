@@ -8,13 +8,6 @@ import { Picture } from "../../components/picture/Picture.js";
 import { SectionTitle } from "../../components/sectionTitle/SectionTitle.js";
 
 export const HowToHelp = () => {
-  const hero = Hero({
-    title: "How to Help",
-    body: "You can make a difference! Find out how you can help us help children and adolescents in need.",
-    imgSrc: "https://via.placeholder.com/150",
-    imgAlt: "How to Help Hero Image",
-  });
-
   const accordions = [
     {
       label: "Foreign Volunteers",
@@ -63,7 +56,12 @@ export const HowToHelp = () => {
   ];
 
   const children = `
-    ${hero}
+    ${Hero({
+      title: "How to Help",
+      body: "You can make a difference! Find out how you can help us help children and adolescents in need.",
+      imgSrc: "./assets/img/how-to-help-hero.jpg",
+      imgAlt: "How to Help Hero Image",
+    })}
     <section class="how-to-help__sponsorship-plan section-container">
       ${SectionTitle({ title: "Become a Sponsor" })}
       ${Blockquote({
@@ -75,7 +73,7 @@ export const HowToHelp = () => {
       ${Paragraph({
         body: `You can become their Sponsor, covering all or part of the cost of their comprehensive care and supporting them to successfully complete their process.`,
       })}
-      <figure class="mt-2">
+      <figure class="mt-2 figure">
         ${Picture({
           className: "",
           desktopImgSrc: "./assets/img/how-to-help-sponsorship-plan.jpg",
@@ -109,7 +107,7 @@ export const HowToHelp = () => {
       ${Paragraph({
         body: `They are the perfect way to express deep gratitude and affection to the people we care about, through a supportive message of love for the most vulnerable children.`,
       })}
-      <figure class="mt-2 mb-2">
+      <figure class="mt-2 mb-2 figure">
         ${Picture({
           className: "about-us__intro--img",
           desktopImgSrc: "./assets/img/how-to-help-christmas-cards.jpg",

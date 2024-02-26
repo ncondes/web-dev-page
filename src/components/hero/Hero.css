@@ -1,6 +1,6 @@
 .hero {
     align-items: center;
-    background-color: var(--crimson-red-color);
+    background-color: var(--crimson-red-hero-bg-color);
     display: flex;
     height: 16rem;
     justify-content: flex-start;

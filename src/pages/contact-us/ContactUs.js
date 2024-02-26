@@ -17,12 +17,6 @@ const HtmlCardBody = ({ subtitle, address, description }) => `
 `;
 
 export const ContactUs = () => {
-  const hero = Hero({
-    title: "Contact Us",
-    body: "We'd love to hear from you! Feel free to reach out to us with any questions or comments.",
-    backgroundImage: "contact-us-hero.jpg",
-  });
-
   const cards = [
     {
       imgSrc: "./assets/img/sede_nuevo_amanecer.jpg",
@@ -93,7 +87,12 @@ export const ContactUs = () => {
   ];
 
   const children = `
-    ${hero}
+    ${Hero({
+      title: "Contact Us",
+      body: "We'd love to hear from you! Feel free to reach out to us with any questions or comments.",
+      imgSrc: "./assets/img/contact-us-hero.jpeg",
+      imgAlt: "Contact Us Hero Image",
+    })}
     <section class="contact-us__contact-info section-container">
       ${SectionTitle({ title: "Contact Information" })}
       ${Paragraph({

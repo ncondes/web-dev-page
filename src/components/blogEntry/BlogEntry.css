@@ -35,9 +35,7 @@
 
 .blog-entry__label-chip {
     padding: 0.5rem 1rem;
-    background-color: var(--crimson-red-color); /* TODO: color based on label */
     color: var(--white-font-color);
-    border-radius: 5px;
     font-size: 0.9rem;
 }
 

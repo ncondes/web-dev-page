@@ -18,13 +18,6 @@ const HtmlTabBody = ({ title, body }) => `
 `;
 
 export const Home = () => {
-  const hero = Hero({
-    title: "Fundación Niños de Los Andes",
-    body: "Over thirty years helping to transform the lives of hundreds of at-risk children and teenagers",
-    imgSrc: "https://via.placeholder.com/150",
-    imgAlt: "Fundación Niños de Los Andes logo",
-  });
-
   const cards = [
     {
       imgSrc: "./assets/img/what-do-we-do-patrullas_de_rescate.jpg",
@@ -101,7 +94,12 @@ export const Home = () => {
   ];
 
   const children = `
-    ${hero}
+    ${Hero({
+      title: "Fundación Niños de Los Andes",
+      body: "Over thirty years helping to transform the lives of hundreds of at-risk children and teenagers",
+      imgSrc: "./assets/img/home-hero.png",
+      imgAlt: "Fundación Niños de Los Andes Hero Image",
+    })}
     <section class="home__intro section-container">
       ${SectionTitle({
         title:

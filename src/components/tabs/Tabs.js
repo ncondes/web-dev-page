@@ -1,8 +1,18 @@
-// options: { bodyHeight: "16rem" }
-
+/**
+ * Generates an HTML string for a tabs component, including both the tab buttons and the tab content.
+ * Allows for dynamic creation of tabs and their content based on provided data.
+ *
+ * @param {Object} props - The properties object.
+ * @param {Array} props.tabs - An array of objects representing each tab and its content.
+ * @param {Object} [props.options={}] - Optional settings for the tabs component.
+ * @param {string} [props.options.className=""] - Additional CSS class to apply to the tabs' body.
+ *
+ * @returns {string} An HTML string representing the tabs component.
+ */
 export const Tabs = ({ tabs, options = {} }) => {
   const { className = "" } = options;
 
+  // Generate HTML for tab buttons
   const tabsHtml = tabs
     .map(
       (tab, index) => `
@@ -17,6 +27,7 @@ export const Tabs = ({ tabs, options = {} }) => {
     )
     .join("");
 
+  // Generate HTML for tab content
   const tabContentsHtml = tabs
     .map(
       (tab, index) =>
@@ -27,7 +38,7 @@ export const Tabs = ({ tabs, options = {} }) => {
     .join("");
 
   return `
-    <div class="tabs shadow">
+    <div class="tabs shadow rounded-sm">
         <nav aria-label="Tabs Navigation">
           <ul class="tabs__navbar" role="menu">
             ${tabsHtml}
@@ -40,6 +51,10 @@ export const Tabs = ({ tabs, options = {} }) => {
   `;
 };
 
+/**
+ * Attaches click event listeners to the tabs navigation bar to switch between tabs.
+ * Only one tab content is visible at a time based on the active tab.
+ */
 export const handleClickOnTabs = () => {
   const tabsNavbar = document.querySelector(".tabs__navbar");
   const tabsBody = document.querySelector(".tabs__body");
@@ -56,10 +71,8 @@ export const handleClickOnTabs = () => {
     if (!clickedTab) return;
 
     const tabData = clickedTab.getAttribute("data-tab");
-
     // Hide all tab content
     tabContents.forEach((content) => (content.style.display = "none"));
-
     // Show the clicked tab's content
     const activeContent = tabContents.find(
       (content) => content.getAttribute("data-tab") === tabData

@@ -6,6 +6,7 @@
     --cold-white-bg-color-hover: #eef1f3;
     --crimson-red-color: #e24f42;
     --crimson-red-color-hover: #b33226;
+    --crimson-red-hero-bg-color: #b5746e4f;
     --black-shadow-color: rgba(0, 0, 0, 0.2);
     --light-gray-color: #a2adba;
     --light-blue-gray-color: #f0f4f8;
@@ -13,7 +14,7 @@
     --pearl-white-color: #dee3e5;
     --forest-green-color: #409a51;
 
-    /* Fonts */
+    /* Font Colors */
     --dark-blue-font-color: #031426;
     --dark-blue-font-color-hover: #1d5389;
     --gray-blue-font-color: #3f4b55;

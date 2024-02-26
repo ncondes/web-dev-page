@@ -1,3 +1,10 @@
+/**
+ * Renders the footer component of the webpage.
+ *
+ * This component includes multiple sections for contact information, headquarters and tax information, social media links, and copyright notice. Each section is structured to provide users with easy access to the organization's contact details, social media platforms, and legal documents.
+ *
+ * @returns {string} HTML string representing the footer component.
+ */
 export const Footer = () => `
   <footer class="footer">
     <section class="footer__contact-us">

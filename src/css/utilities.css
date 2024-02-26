@@ -17,3 +17,11 @@
 .shadow {
     box-shadow: 0 0.2rem .6rem 0 var(--black-shadow-color);
 }
+
+.rounded-sm {
+    border-radius: 0.2rem;
+}
+
+.rounded {
+    border-radius: 0.4rem;
+}

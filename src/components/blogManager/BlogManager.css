@@ -14,14 +14,12 @@
     width: 100%;
     padding: 0.6rem;
     border: 1px solid var(--light-gray-color);
-    border-radius: 0.2rem;
 }
 
 .blog-select {
     width: 100%;
     padding: 0.6rem;
     border: 1px solid var(--light-gray-color);
-    border-radius: 0.2rem;
 }
 
 #select-blog-category {
@@ -37,7 +35,6 @@
     width: 100%;
     padding: 0.6rem;
     border: none;
-    border-radius: 0.2rem;
     background-color: var(--oil-blue-color);
     color: var(--white-font-color);
     transition: background-color 0.3s ease;

@@ -52,6 +52,5 @@
 @media (min-width: 1200px) {
     .contact-us__contact-info--container {
         grid-template-columns: repeat(2, 1fr);
-    }
-    
+    } 
 }

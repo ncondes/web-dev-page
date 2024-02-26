@@ -1,6 +1,5 @@
 .accordion__item {
     background-color: var(--cold-white-bg-color);
-    border-radius: 0.5rem;
     margin-bottom: .2rem;
 }
 

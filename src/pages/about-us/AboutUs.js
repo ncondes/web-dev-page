@@ -11,7 +11,7 @@ import { Tabs } from "../../components/tabs/Tabs.js";
 const HtmlTabBody = ({ title, imgSrc, imgAlt, body }) => `
   <div class="about-us__history-tab-content">
     <h3>${title}</h3>
-    <img src="${imgSrc}" alt="${imgAlt}" />
+    <img class="rounded-sm" src="${imgSrc}" alt="${imgAlt}" />
     <div>${body}</div>
   </div>
 `;
@@ -23,13 +23,6 @@ const HtmlAccordionBody = ({ iconClass, body }) => `
 </div>`;
 
 export const AboutUs = () => {
-  const hero = Hero({
-    title: "About Us",
-    body: "Empowering Colombia's street children through comprehensive care, Fundación Niños de Los Andes strives to protect their fundamental rights and foster their physical, mental, spiritual, and social development. Join us in making a real difference.",
-    imgSrc: "https://via.placeholder.com/150",
-    imgAlt: "Fundación Niños de Los Andes logo",
-  });
-
   const tabs = [
     {
       label: "1973",
@@ -149,13 +142,18 @@ export const AboutUs = () => {
   ];
 
   const children = `
-    ${hero}
+    ${Hero({
+      title: "About Us",
+      body: "Empowering Colombia's street children through comprehensive care, Fundación Niños de Los Andes strives to protect their fundamental rights and foster their physical, mental, spiritual, and social development. Join us in making a real difference.",
+      imgSrc: "./assets/img/about-us-hero.png",
+      imgAlt: "About Us Hero Image",
+    })}
     <section class="about-us__intro section-container">
       ${SectionTitle({ title: "About Us" })}
       ${Paragraph({
         body: `Fundación Niños de Los Andes is a non-profit Colombian organization dedicated to protecting and rehabilitating street children, offering them real solutions to improve their quality of life and foster their overall development. Since its inception by Papá Jaime, over 65,000 children have found a nurturing home, overcome malnutrition, pursued education, and grown into happy, productive community members. Supported by donations, campaigns, and partnerships, the Foundation provides comprehensive care in nutrition, health, psychosocial support, and life skills education, based on Papá Jaime's SER philosophy. Operating in five facilities with a yearly capacity of 1,510 children, it aims to restore rights, achieve social inclusion, and improve family ties, in alignment with Colombia's legal requirements and overseen by Crowe audits to ensure transparency.`,
       })}
-      <figure class="mt-2">
+      <figure class="mt-2 figure">
         ${Picture({
           className: "about-us__intro--img",
           desktopImgSrc: "./assets/img/about-us-team.jpeg",

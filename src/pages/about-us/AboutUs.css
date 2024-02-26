@@ -1,13 +1,3 @@
-.about-us__intro figure {
-    width: 100%;
-
-    img {
-        border-radius: .2rem ;
-        width: 100%;
-        object-fit: cover;
-    }
-}
-
 .about-us__history-tab-content {
     h3 {
         font-size: 1.2rem;
@@ -20,7 +10,6 @@
         width: 150px;
         float: right;
         margin-left: .8rem;
-        border-radius: .2rem;
     }
     
     a {

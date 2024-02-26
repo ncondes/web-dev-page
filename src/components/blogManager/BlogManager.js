@@ -1,18 +1,28 @@
 import { BlogGrid } from "../blogGrid/BlogGrid.js";
 
+/**
+ * Manages the display of blog entries with options to filter, sort, and search through them.
+ *
+ * @param {Object} props - The properties object for the Blog Manager.
+ * @param {Array} props.data - An array of blog entry objects to be managed.
+ * @returns {string} HTML string representing the blog management UI and the filtered, sorted, and searched blog entries.
+ */
 export const BlogManager = ({ data }) => {
+  // Copies the initial dataset to manage display without mutating the original data
   let blogEntries = [...data];
+  // Initialize filter, sort, and search states
   let currentFilter = "All";
   let currentSort = "Newest";
   let currentSearchTerm = "";
 
+  // Updates the display based on current filter, sort, and search criteria.
   const updateDisplay = () => {
-    // Apply filter first
+    // Filter entries based on the currentFilter value
     let processedEntries = blogEntries.filter(
       (entry) => currentFilter === "All" || entry.label === currentFilter
     );
 
-    // Apply search within the filtered results
+    // Further filter the entries based on the currentSearchTerm within the title or content
     if (currentSearchTerm) {
       processedEntries = processedEntries.filter(
         (entry) =>
@@ -21,19 +31,20 @@ export const BlogManager = ({ data }) => {
       );
     }
 
-    // Apply sort within the filtered and searched results
+    // Sort the filtered and searched entries based on the currentSort criteria
     processedEntries.sort((a, b) => {
       const dateA = new Date(a.date).getTime();
       const dateB = new Date(b.date).getTime();
       return currentSort === "Newest" ? dateB - dateA : dateA - dateB;
     });
 
-    // Update BlogGrid display
+    // Renders the processed entries to the page
     document.getElementById("blog-grid-container").innerHTML = BlogGrid({
       blogEntries: processedEntries,
     });
   };
 
+  // Handlers for filter, sort, and search functionalities
   window.handleSelectFilter = (event) => {
     currentFilter = event.target.value;
     updateDisplay();
@@ -49,6 +60,7 @@ export const BlogManager = ({ data }) => {
     updateDisplay();
   };
 
+  // Resets all filters and search input to their default states and updates the display.
   window.resetFilters = () => {
     currentFilter = "All";
     currentSort = "Newest";
@@ -60,10 +72,11 @@ export const BlogManager = ({ data }) => {
     updateDisplay();
   };
 
+  // Renders the blog management UI with filter, sort, search options, and the blog grid container
   return `
     <div class="filters-container">
-      <input type="text" id="search-blog-input" placeholder="Search..." oninput="handleSearchInput(event)">
-      <select class="blog-select" id="select-blog-category" onchange="handleSelectFilter(event)">
+      <input class="rounded-sm" type="text" id="search-blog-input" placeholder="Search..." oninput="handleSearchInput(event)">
+      <select class="blog-select rounded-sm" id="select-blog-category" onchange="handleSelectFilter(event)">
         <option value="All">All</option>
         <option value="New">New</option>
         <option value="Popular">Popular</option>
@@ -71,16 +84,16 @@ export const BlogManager = ({ data }) => {
         <option value="Must Read">Must Read</option>
         <option value="Editor's Choice">Editor's Choice</option>
       </select>
-      <select class="blog-select" id="select-sort-by" onchange="handleSortBy(event)">
+      <select class="blog-select rounded-sm" id="select-sort-by" onchange="handleSortBy(event)">
         <option value="Newest">Newest</option>
         <option value="Oldest">Oldest</option>
       </select>
       <button
-        class="blog-reset-button" 
+        class="blog-reset-button rounded-sm" 
         type="button"
         onclick="resetFilters()"
       >
-        <i class="fa-solid fa-arrows-rotate"></i>
+        Reset Filters
       </button>
     </div>
     <div id="blog-grid-container">

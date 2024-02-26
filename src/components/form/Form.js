@@ -1,43 +1,48 @@
 import { generateCaptcha } from "../../utils/generateCaptcha.js";
 
+/**
+ * Renders a form component with input fields for name, email, message, terms of privacy agreement, and a CAPTCHA challenge for submission validation.
+ *
+ * @returns {string} HTML string representing the form component.
+ */
 export const Form = () => {
   return `
-  <form class="form shadow" onsubmit="handleFormSubmit(event)">
-    <div class="form__group">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" placeholder="Name" required />
-    </div>
-    <div class="form__group">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="Email" required />
-    </div>
-    <div class="form__group">
-      <label for="message">Message</label>
-      <textarea id="message" name="message" placeholder="Write here your message" required></textarea>
-    </div>
-    <div class="form__checkbox">
-      <input type="checkbox" id="terms" name="terms" required />
-      <label for="terms">I agree to the Terms of Privacy</label>
-    </div>
-    <div class="form__group">
-      <label for="captcha">Enter Captcha</label>
-      <div id="captcha_challenge"></div>
-      <div class="form__captcha-input">
-        <input type="text" id="captcha" name="captcha" placeholder="Enter captcha here" required />
-        <button
-          type="button"
-          onclick="setCaptcha()"
-        >
-          <i class="fa-solid fa-arrows-rotate"></i>
-        </button>
+    <form class="form shadow rounded-sm" onsubmit="handleFormSubmit(event)">
+      <div class="form__group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Name" required />
       </div>
-      <span class="form__error-message" id="captcha-error"></span>
-    </div>
-    <button class="form__submit-button" type="submit">Send</button>
-    <div class="form__success-submit">
-      <p>Message sent successfully</p>
-    </div>
-  </form>
+      <div class="form__group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Email" required />
+      </div>
+      <div class="form__group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Write here your message" required></textarea>
+      </div>
+      <div class="form__checkbox">
+        <input type="checkbox" id="terms" name="terms" required />
+        <label for="terms">I agree to the Terms of Privacy</label>
+      </div>
+      <div class="form__group">
+        <label for="captcha">Enter Captcha</label>
+        <div id="captcha_challenge"></div>
+        <div class="form__captcha-input">
+          <input type="text" id="captcha" name="captcha" placeholder="Enter captcha here" required />
+          <button
+            type="button"
+            onclick="setCaptcha()"
+          >
+            <i class="fa-solid fa-arrows-rotate"></i>
+          </button>
+        </div>
+        <span class="form__error-message" id="captcha-error"></span>
+      </div>
+      <button class="form__submit-button" type="submit">Send</button>
+      <div class="form__success-submit">
+        <p>Message sent successfully</p>
+      </div>
+    </form>
   `;
 };
 

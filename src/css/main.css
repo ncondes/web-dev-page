@@ -1,6 +1,7 @@
 /*
  * Base
  */
+@import url('./variables.css');
 @import url('./reset.css');
 
 /*
@@ -28,7 +29,6 @@
  */
 @import url('../pages/home/Home.css');
 @import url('../pages/about-us/AboutUs.css');
-@import url('../pages/how-to-help/HowToHelp.css');
 @import url('../pages/contact-us/ContactUs.css');
 
 /*
@@ -46,6 +46,17 @@
     margin: 0 auto 3rem auto;
 }
 
+.figure {
+    width: 100%;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0.2rem;
+    }
+}
+
 .overlay {
     display: none;
     position: fixed;
@@ -58,6 +69,10 @@
     overflow-x: hidden; 
     animation: fadeInAnimation ease-in-out .5s;
     animation-fill-mode: forwards;
+}
+
+#root {
+    animation: fadeInAnimation ease-out forwards 1s;
 }
 
 @keyframes fadeInAnimation {
