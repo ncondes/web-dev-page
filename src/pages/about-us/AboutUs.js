@@ -8,6 +8,15 @@ import { Picture } from "../../components/picture/Picture.js";
 import { SectionTitle } from "../../components/sectionTitle/SectionTitle.js";
 import { Tabs } from "../../components/tabs/Tabs.js";
 
+/**
+ * Generates HTML for a tab body with title, image, and text content.
+ * @param {Object} props - The properties object.
+ * @param {string} props.title - The tab title.
+ * @param {string} props.imgSrc - The image source URL.
+ * @param {string} props.imgAlt - The image alt text.
+ * @param {string} props.body - The body content in HTML format.
+ * @returns {string} An HTML string for the tab body.
+ */
 const HtmlTabBody = ({ title, imgSrc, imgAlt, body }) => `
   <div class="about-us__history-tab-content">
     <h3>${title}</h3>
@@ -16,13 +25,25 @@ const HtmlTabBody = ({ title, imgSrc, imgAlt, body }) => `
   </div>
 `;
 
+/**
+ * Generates HTML for an accordion body with an icon and text content.
+ * @param {Object} props - The properties object.
+ * @param {string} props.iconClass - The class for the icon.
+ * @param {string} props.body - The body content as text.
+ * @returns {string} An HTML string for the accordion body.
+ */
 const HtmlAccordionBody = ({ iconClass, body }) => `
 <div class="about-us__accordion-body">
   <i class="${iconClass}"></i>
   <p>${body}</p>
 </div>`;
 
+/**
+ * Constructs the About Us page using various components.
+ * @returns {string} HTML string representing the About Us page.
+ */
 export const AboutUs = () => {
+  // Define tabs for the history section.
   const tabs = [
     {
       label: "1973",
@@ -116,7 +137,7 @@ export const AboutUs = () => {
       }),
     },
   ];
-
+  // Define accordions for the mission, vision, and philosophy section.
   const accordions = [
     {
       label: "Mission",

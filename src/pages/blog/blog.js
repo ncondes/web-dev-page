@@ -3,7 +3,12 @@ import { Hero } from "../../components/hero/Hero.js";
 import { Layout } from "../../components/layout/Layout.js";
 import { SectionTitle } from "../../components/sectionTitle/SectionTitle.js";
 
+/**
+ * Constructs the Blog page with a hero section, blog entries, and a dynamic filtering and sorting system.
+ * @returns {string} HTML string representing the Blog page.
+ */
 export const Blog = () => {
+  // Blog entry objects with title, label, date, content, and image source.
   const blogData = [
     {
       title: "Children, adolescents, feeding, and nutrition",

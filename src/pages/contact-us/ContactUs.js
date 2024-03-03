@@ -5,6 +5,11 @@ import { Layout } from "../../components/layout/Layout.js";
 import { Paragraph } from "../../components/paragraph/Paragraph.js";
 import { SectionTitle } from "../../components/sectionTitle/SectionTitle.js";
 
+/**
+ * Generates the HTML body content for each card displayed in the Contact Us page's "Our Locations" section.
+ * @param {Object} props - The properties object, containing subtitle, address, and description.
+ * @returns {string} - The HTML string for the body of a location card.
+ */
 const HtmlCardBody = ({ subtitle, address, description }) => `
   <div class="location-card-body">
     <p>${subtitle}</p>
@@ -16,7 +21,13 @@ const HtmlCardBody = ({ subtitle, address, description }) => `
   </div>
 `;
 
+/**
+ * Constructs the Contact Us page, incorporating various components such as Hero, SectionTitle, CardGrid, and Form.
+ * The page provides contact information, showcases facility locations, and includes a form for visitors to get in touch.
+ * @returns {string} - HTML string representing the Contact Us page.
+ */
 export const ContactUs = () => {
+  // Define the data for the location cards to be displayed.
   const cards = [
     {
       imgSrc: "./assets/img/sede_nuevo_amanecer.jpg",

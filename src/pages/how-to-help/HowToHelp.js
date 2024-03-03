@@ -7,7 +7,13 @@ import { Paragraph } from "../../components/paragraph/Paragraph.js";
 import { Picture } from "../../components/picture/Picture.js";
 import { SectionTitle } from "../../components/sectionTitle/SectionTitle.js";
 
+/**
+ * Generates the "How to Help" page content including various sections like sponsorship, volunteering,
+ * campaigns, and more, using other components for structured content presentation.
+ * @returns {string} The HTML content for the "How to Help" page.
+ */
 export const HowToHelp = () => {
+  // Define the content for the accordion sections
   const accordions = [
     {
       label: "Foreign Volunteers",

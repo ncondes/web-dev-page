@@ -93,7 +93,7 @@ export const BlogManager = ({ data }) => {
         type="button"
         onclick="resetFilters()"
       >
-        Reset Filters
+        <i class="fas fa-undo"></i>
       </button>
     </div>
     <div id="blog-grid-container">

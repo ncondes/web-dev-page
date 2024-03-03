@@ -6,10 +6,23 @@ import { Paragraph } from "../../components/paragraph/Paragraph.js";
 import { SectionTitle } from "../../components/sectionTitle/SectionTitle.js";
 import { Tabs } from "../../components/tabs/Tabs.js";
 
+/**
+ * Generates HTML content for a card body.
+ * @param {Object} params - The parameters for generating the card body HTML.
+ * @param {string} params.body - The body text for the card.
+ * @returns {string} The HTML string for the card body.
+ */
 const HtmlCardBody = ({ body }) => `
   <p>${body}</p>
 `;
 
+/**
+ * Generates HTML content for a tab body.
+ * @param {Object} params - The parameters for generating the tab body HTML.
+ * @param {string} params.title - The title of the tab.
+ * @param {string} params.body - The body content of the tab.
+ * @returns {string} The HTML string for the tab body.
+ */
 const HtmlTabBody = ({ title, body }) => `
   <div class="home__tab--attention-model">
     <h3>${title}</h3>
@@ -17,7 +30,14 @@ const HtmlTabBody = ({ title, body }) => `
   </div>
 `;
 
+/**
+ * Represents the home page of the application.
+ * This component is responsible for rendering the home page, including the hero section, introductory content,
+ * our programs, and the attention model.
+ * @returns {string} The complete HTML content for the home page.
+ */
 export const Home = () => {
+  // Define cards for the "Our Programs" section
   const cards = [
     {
       imgSrc: "./assets/img/what-do-we-do-patrullas_de_rescate.jpg",
@@ -54,7 +74,7 @@ export const Home = () => {
       }),
     },
   ];
-
+  // Define tabs for the "Attention Model" section
   const tabs = [
     {
       label: "Phase I",
